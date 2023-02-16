@@ -1,0 +1,14 @@
+[
+  {
+    "name": "D.V Catena",
+    "image": "/catena-1.jpg",
+    "type": "Cabernet-Malbec",
+    "price": "$1500"
+  },
+  {
+    "name": "Rutini",
+    "image": "/rutini-1.jpg",
+    "type": "Cabernet-Malbec",
+    "price": "$1500"
+  }
+]
