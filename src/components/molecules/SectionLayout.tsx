@@ -1,8 +1,18 @@
 import React from 'react'
 
-function SectionLayout({ children } : { children: JSX.Element | JSX.Element[] }) {
+function SectionLayout({
+   ref,
+   id,
+   bgColor,
+   children,
+  } : { 
+    ref: HTMLDivElement | undefined,
+    id: string, 
+    bgColor: string,
+    children: JSX.Element | JSX.Element[] 
+  }) {
   return (
-    <div>
+    <div id={id} ref={ref} className=''>
       { children }
     </div>
   )
