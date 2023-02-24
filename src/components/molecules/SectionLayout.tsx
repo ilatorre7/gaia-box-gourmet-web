@@ -12,9 +12,9 @@ function SectionLayout({
     children: JSX.Element | JSX.Element[] 
   }) {
   return (
-    <div id={id} ref={ref} className=''>
+    {/* <div id={id} ref={ref} className=''>
       { children }
-    </div>
+    </div> */}
   )
 }
 
