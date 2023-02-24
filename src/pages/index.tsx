@@ -2,59 +2,58 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import localFont from '@next/font/local';
 import { NavBar, Hero, About, Menu, Wine, Events, Contact } from '@/components'
-import { fonts } from '@/static/fonts';
 import menu from '@/static/menu.json';
 import wines from '@/static/wines.json';
 
 const brandonGrotesque = localFont({ 
   src: [
     {
-      path: "../assets/fonts/Brandon_light.otf",
+      path: "@/assets/fonts/Brandon_light.otf",
       weight: "300",
       style: "normal"
     },
     {
-      path: "../assets/fonts/Brandon_light_it.otf",
+      path: "@/assets/fonts/Brandon_light_it.otf",
       weight: "300",
       style: "italic"
     },
     {
-      path: "../assets/fonts/Brandon_reg.otf",
+      path: "@/assets/fonts/Brandon_reg.otf",
       weight: "400",
       style: "normal"
     },
     {
-      path: "../assets/fonts/Brandon_reg_it.otf",
+      path: "@/assets/fonts/Brandon_reg_it.otf",
       weight: "400",
       style: "italic"
     },
     {
-      path: "../assets/fonts/Brandon_med.otf",
+      path: "@/assets/fonts/Brandon_med.otf",
       weight: "500",
       style: "normal"
     },
     {
-      path: "../assets/fonts/Brandon_med_it.otf",
+      path: "@/assets/fonts/Brandon_med_it.otf",
       weight: "500",
       style: "italic"
     },
     {
-      path: "../assets/fonts/Brandon_bld.otf",
+      path: "@/assets/fonts/Brandon_bld.otf",
       weight: "600",
       style: "normal"
     },
     {
-      path: "../assets/fonts/Brandon_bld_it.otf",
+      path: "@/assets/fonts/Brandon_bld_it.otf",
       weight: "600",
       style: "italic"
     },
     {
-      path: "../assets/fonts/Brandon_blk.otf",
+      path: "@/assets/fonts/Brandon_blk.otf",
       weight: "700",
       style: "normal"
     },
     {
-      path: "../assets/fonts/Brandon_blk_it.otf",
+      path: "@/assets/fonts/Brandon_blk_it.otf",
       weight: "700",
       style: "italic"
     }
