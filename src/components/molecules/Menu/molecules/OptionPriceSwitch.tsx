@@ -1,5 +1,7 @@
 import gsap from 'gsap';
-import React, { useState, useRef, useLayoutEffect } from 'react'
+import React, { useState, useRef } from 'react'
+import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
+
 import { onPrev, onNext } from '../SwitcherEvents'
 
 interface OptionPriceSwitchType {
@@ -20,7 +22,7 @@ function OptionPriceSwitch({
 
   const enableButtons = options?.length !== 1 || false;
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from('.options', {
         opacity: 0,

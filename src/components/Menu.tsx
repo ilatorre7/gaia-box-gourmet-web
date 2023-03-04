@@ -1,10 +1,8 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
-import { onPrev, onNext } from './molecules/Menu/SwitcherEvents';
-import { gsap } from "gsap";
+import React, { useState } from 'react';
 import { MenuItem } from './molecules/Menu/types';
-import DescriptionMenu from './molecules/Menu/DescriptionMenu';
-import ImageMenu from './molecules/Menu/ImageMenu';
 import ButtonSwitch from './molecules/Menu/molecules/ButtonSwitch';
+import CardMenu from './molecules/Menu/CardMenu';
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 function Menu({
   menu,
@@ -12,55 +10,30 @@ function Menu({
   menu: MenuItem[] 
 }) {
   const [index, setIndex] = useState<number>(0);
-  const [direction, setDirection] = useState<string>('right');
-  const menuRef = useRef<HTMLDivElement>(null);
-
+  
   const handlePrev = () => {
-    setDirection('left');
-    onPrev(index, menu, setIndex);
+    setIndex(index === 0 ? menu.length - 1 : index - 1);
   };
 
   const handleNext = () => {
-    setDirection('right');
-    onNext(index, menu, setIndex);
+    setIndex(index === menu.length - 1 ? 0 : index + 1);
   };
 
-  const {
-    name,
-    image
-  } = menu[index];
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      if (direction === 'right') {
-        gsap.from('.menu', { x: '-100vw', ease: 'power3.in' })
-        gsap.from('.image', { x: '-50vw', ease: 'power3.in' })
-      }
-      else {
-        gsap.from('.menu', { x: '100vw', ease: 'power3.in' })
-        gsap.from('.image', { x: '50vw', ease: 'power3.in' })
-      }
-    }, menuRef);
-    return () => ctx.revert();
-  }, [index, direction]);
-
   return (
-    <div id="menu" ref={menuRef} className='bg-gaiaSecondary flex flex-col md:flex-row md:items-stretch py-8'>
-      <ButtonSwitch breakpoint='md' onClick={handlePrev} label="<" />
-      <ImageMenu 
-        {...{
-          name,
-          image,
-          onPrev: handlePrev,
-          onNext: handleNext,
-        }}
-      />
-      <DescriptionMenu
-        {...{
-          ...menu[index],
-        }} 
-      />
-      <ButtonSwitch breakpoint='md' onClick={handleNext} label=">" />
+    <div id="menu" className='bg-gaiaSecondary py-8 flex overflow-hidden relative w-full'>
+      <div className='w-screen'>
+        <div className={`flex transition-transform ease-out duration-500`} style={{ transform: `translateX(-${index * 100}vw)`}}>
+          {
+            menu.map((item,i) => (
+              <CardMenu key={`menu-item-${i}`} {...{...item}} />
+            ))
+          }
+        </div>
+      </div>
+      <div className='absolute inset-0 flex justify-between p-4 z-10'>
+        <ButtonSwitch onClick={handlePrev}><IoChevronBack /></ButtonSwitch>
+        <ButtonSwitch onClick={handleNext}><IoChevronForward /></ButtonSwitch>
+      </div>
     </div>
   )
 }

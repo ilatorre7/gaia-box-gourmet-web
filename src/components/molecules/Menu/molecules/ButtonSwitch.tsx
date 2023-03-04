@@ -1,25 +1,17 @@
 import React from 'react'
 
 function ButtonSwitch({ 
-  breakpoint,
   onClick,
   label,
+  className,
+  children,
 }: { 
-  breakpoint: string,
   onClick: () => void,
-  label: string,
+  label?: string,
+  className?: string,
+  children?: React.ReactNode,
 }) {
-  const buttonStyle = (() => {
-    if (breakpoint === 'md') {
-      return 'hidden md:block'
-    }
-    if (breakpoint === 'sm') {
-      return'block md:hidden'
-    }
-    return ''
-  })();
-
-  return <button className={`${buttonStyle} px-4 text-slate-700 text-lg hover:bg-gray-300 duration-150`} onClick={onClick}>{label}</button>
+  return <button className={`${className} px-4 text-slate-700 text-lg`} onClick={onClick}>{label ? label : children }</button>
 }
 
 export default ButtonSwitch
