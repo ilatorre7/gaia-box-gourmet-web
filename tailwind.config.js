@@ -11,6 +11,10 @@ module.exports = {
         gaiaTertiary: '#627b53',
         wine: '#3A0842',
       },
+      spacing: {
+        half: '50vw',
+        aHalf: '45vw',
+      }
     },
     fontFamily: {
       brandon: ['Brandon Grotesque', 'sans-serif']

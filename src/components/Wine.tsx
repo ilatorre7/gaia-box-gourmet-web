@@ -1,9 +1,10 @@
-import React, { useState, useRef, useLayoutEffect } from 'react'
+import React, { useState, useRef } from 'react'
+import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
 import Image from 'next/image'
 import { onPrev, onNext } from './molecules/Menu/SwitcherEvents'
 import gsap from 'gsap'
 
-interface Wine {
+interface WineType {
   name: string,
   type: string,
   image: string,
@@ -13,7 +14,7 @@ interface Wine {
 function Wine({
   wines
 } : { 
-  wines: Wine[]
+  wines: WineType[]
 }) {
   const wineRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
@@ -28,7 +29,7 @@ function Wine({
     price
   } = wines[index];
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from('.wineName', { opacity: 0, ease: 'power3.in' })
       gsap.from('.image', { opacity: 0, ease: 'power3.in' })

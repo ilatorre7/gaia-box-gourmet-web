@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import React,{ useRef, useLayoutEffect } from 'react'
+import React,{ useRef } from 'react'
+import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SectionText from './molecules/SectionText';
@@ -9,11 +10,11 @@ function About() {
   gsap.registerPlugin(ScrollTrigger);
   const aboutRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const tl = gsap.timeline({ scrollTrigger: { trigger: '#about' } });
-      tl.from('.text', { x: '-50vw', opacity: 0, ease: 'power3.in', duration: 1.5 })
-      .from('.image', { x: '50vw', opacity: 0, ease: 'power3.in', duration: 1.5 })
+      const tl = gsap.timeline({ scrollTrigger: { trigger: '#about', /* scrub: true, markers:true, end: '+=90%' */ } });
+      tl.from('.text', { x: '-50vw', opacity: 0, ease: 'power3.in', duration: 1 })
+      .from('.image', { x: '50vw', opacity: 0, ease: 'power3.in', duration: 1 })
     }, aboutRef);
     return () => ctx.revert();
   }, []);

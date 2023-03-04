@@ -9,7 +9,7 @@ import ContactForm from './molecules/Contact/ContactForm';
 function Contact() {
 
   return (
-    <div id="contact" className='bg-gaia flex flex-col lg:flex-row w-full py-8'>
+    <div id="contact" className='bg-gaia w-full py-8 flex flex-col lg:flex-row'>
       <div className='w-full lg:w-1/2 px-8 flex flex-col justify-between'>
         <div>
           <Title>Contáctanos!</Title>
@@ -24,8 +24,8 @@ function Contact() {
           </div>
         </div>
         <div className='flex space-x-8 py-8 lg:py-0'>
-          <a href={whatsApp}><IoLogoWhatsapp className='text-slate-700 text-2xl hover:text-gray-100 duration-150'></IoLogoWhatsapp></a>
-          <a href={instagram}><IoLogoInstagram className='text-slate-700 text-2xl hover:text-gray-100 duration-150'></IoLogoInstagram></a>
+          <a href={whatsApp}><IoLogoWhatsapp className='text-slate-700 text-4xl hover:text-gray-100 duration-150'></IoLogoWhatsapp></a>
+          <a href={instagram}><IoLogoInstagram className='text-slate-700 text-4xl hover:text-gray-100 duration-150'></IoLogoInstagram></a>
         </div>
       </div>
       <div className='w-full lg:w-1/2 flex justify-center'>

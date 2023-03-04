@@ -1,19 +1,20 @@
 import Image from 'next/image'
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { gsap } from "gsap";
+import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
 
 function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from('.image', { scale: 0.2, duration: 2 })
+      gsap.from('.image', { opacity: 0, y: '-100%' , duration: 2 })
     }, heroRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={heroRef} className='w-full h-screen overflow-hidden relative bg-black'>
+    <div ref={heroRef} id='hero' className='w-full h-screen overflow-hidden relative bg-black'>
       <Image 
         src='/hero-image.png' 
         alt='Box Gaia con un rio de fondo' 
