@@ -13,7 +13,7 @@ function CardMenu({
   prices,
 } : MenuItem) {
   return (
-    <div className='flex flex-col lg:flex-row justify-center items-center shrink-0 grow-0 basis-full w-screen'>
+    <div className='flex flex-col lg:flex-row justify-center items-center shrink-0 grow-0 basis-full'>
       <div className='p-4 image w-full lg:w-half flex justify-center items-center'>
         <div className='hidden md:flex w-full justify-center'>
           <Image src={image} alt={name} width={600} height={600} className='rounded-2xl shadow-xl' />

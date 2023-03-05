@@ -3,6 +3,7 @@ import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
 import Image from 'next/image'
 import { onPrev, onNext } from './molecules/Menu/SwitcherEvents'
 import gsap from 'gsap'
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 interface WineType {
   name: string,
@@ -43,13 +44,13 @@ function Wine({
       <div ref={wineRef} className='flex flex-col md:flex-row items-center md:space-x-8'>
         <Image src={image} height={480} width={320} alt={name} className="image rounded-xl m-2 shadow-lg" />
         <div className='w-full md:w-auto flex justify-between items-center px-4 md:px-0'>
-          <button className='py-4 px-6 rounded-full bg-gray-100 text-wine' onClick={handlePrev}>{'<'}</button>
+          <button className='p-4 rounded-full bg-gray-100 text-wine' onClick={handlePrev}><IoChevronBack /></button>
           <div className='wineName flex flex-col items-center md:mx-8 mx-4'>
             <p className='text-gray-100 my-2 text-center font-bold text-3xl'>{name}</p>
             <p className='text-gray-100 mb-4 text-center text-md'>{type}</p>
             <p className='ring-1 ring-gray-100 text-gray-100 font-bold rounded-xl px-4 py-2'>{price}</p>
           </div>
-          <button className='py-4 px-6 rounded-full bg-gray-100 text-wine' onClick={handleNext}>{'>'}</button>
+          <button className='p-4 rounded-full bg-gray-100 text-wine' onClick={handleNext}><IoChevronForward /></button>
         </div>
       </div>
     </div>
