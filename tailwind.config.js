@@ -12,6 +12,7 @@ module.exports = {
         wine: '#3A0842',
       },
       spacing: {
+        aFull: '90vw',
         half: '50vw',
         aHalf: '45vw',
       }
