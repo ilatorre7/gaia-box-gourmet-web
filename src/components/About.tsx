@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SectionText from './molecules/SectionText';
 import SectionTitle from './molecules/SectionTitle';
+import { prefix } from '@/utilities/prefix';
 
 function About() {
   gsap.registerPlugin(ScrollTrigger);
@@ -29,7 +30,7 @@ function About() {
         </SectionText>
       </div>
       <div className='image w-full lg:w-1/2 px-4 flex justify-center items-center'>
-        <Image src="/about.png" alt="Productos de Gaia Box" width={884} height={590} className='rounded-xl shadow-xl' />
+        <Image src={`${prefix}/about.png`} alt="Productos de Gaia Box" width={884} height={590} className='rounded-xl shadow-xl' />
       </div>
     </div>
   )

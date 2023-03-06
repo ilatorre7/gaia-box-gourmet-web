@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
 import localFont from '@next/font/local';
 import { NavBar, Hero, About, Menu, Wine, Events, Contact } from '@/components'
 import menu from '@/static/menu.json';
@@ -60,8 +59,6 @@ const brandonGrotesque = localFont({
     }
   ]
 });
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 

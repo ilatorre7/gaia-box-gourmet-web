@@ -80,6 +80,8 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
+  env:
+    NEXT_PUBLIC_BASE_PATH: /gaia-box-gourmet-web
 
   # Deployment job
   deploy:
