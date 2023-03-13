@@ -51,7 +51,7 @@ function Menu({
                       key={`menu-item-${i}`} 
                       {...{
                         ...item,
-                        image: `${prefix}${item.image}`
+                        image: `https://ilatorre7.github.io/gaia-box-gourmet-web${item.image}`
                       }} 
                       />
                 ))

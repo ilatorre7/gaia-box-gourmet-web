@@ -56,7 +56,7 @@ function Wine({
       <div className='wineContent bg-wine w-full flex flex-col items-center py-8 overflow-hidden'>
         <h1 className='title text-gray-100 text-2xl font-bold pb-8 text-center md:text-left px-4 md:px-0'>{'Podemos agregar un vino a cualquiera de los boxes!'}</h1>
         <div ref={wineRef} className='content flex flex-col md:flex-row items-center md:space-x-8'>
-          <Image src={`${prefix}${image}`} height={480} width={320} alt={name} className="image rounded-xl m-2 shadow-lg" />
+          <Image src={`https://ilatorre7.github.io/gaia-box-gourmet-web${image}`} height={480} width={320} alt={name} className="image rounded-xl m-2 shadow-lg" />
           <div className='w-full md:w-auto flex justify-between items-center px-4 md:px-0'>
             <button className='p-4 rounded-full bg-gray-100 text-wine' onClick={handlePrev}><IoChevronBack /></button>
             <div className='wineName flex flex-col items-center md:mx-8 mx-4'>

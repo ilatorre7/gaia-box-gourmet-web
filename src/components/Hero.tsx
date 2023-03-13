@@ -19,13 +19,13 @@ function Hero() {
   return (
     <div ref={heroRef} id='hero' className='w-full h-screen overflow-hidden relative bg-black'>
       <Image 
-        src={`${prefix}/hero-image.png`}
+        src={`https://ilatorre7.github.io/gaia-box-gourmet-web/hero-image.png`}
         alt='Box Gaia con un rio de fondo' 
         fill
         className='object-cover bg-black opacity-60'
       />
       <div className='relative flex flex-col justify-center items-center h-full p-4'>
-        <Image src={`${prefix}/logo-hero.png`} alt="Gaia Logo" width={442.5} height={442.5} className='image' />
+        <Image src={`https://ilatorre7.github.io/gaia-box-gourmet-web/logo-hero.png`} alt="Gaia Logo" width={442.5} height={442.5} className='image' />
         {/* <h1 className='px-4 lg:px-0 text-6xl text-center font-bold text-gray-100'>Gaia Box Gourmet</h1> */}
       </div>
     </div>

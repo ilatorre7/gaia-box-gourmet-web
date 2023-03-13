@@ -34,8 +34,8 @@ function Events() {
           </ContentText>
         </div>
         <div className='imageEvents w-full lg:w-1/2 flex justify-center p-4'>
-          <Image src={`${prefix}/events.png`} alt='eventos' height={512} width={384} className='block lg:hidden rounded-xl shadow-xl' />
-          <Image src={`${prefix}/events-lg.png`} alt='eventos' height={733} width={662} className='hidden lg:block rounded-xl shadow-xl' />
+          <Image src={`https://ilatorre7.github.io/gaia-box-gourmet-web/events.png`} alt='eventos' height={512} width={384} className='block lg:hidden rounded-xl shadow-xl' />
+          <Image src={`https://ilatorre7.github.io/gaia-box-gourmet-web/events-lg.png`} alt='eventos' height={733} width={662} className='hidden lg:block rounded-xl shadow-xl' />
         </div>
       </div>
     </div>

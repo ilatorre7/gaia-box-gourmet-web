@@ -30,7 +30,7 @@ function About() {
           </SectionText>
         </div>
         <div className='image w-full lg:w-1/2 px-4 flex justify-center items-center'>
-          <Image src={`${prefix}/about.png`} alt="Productos de Gaia Box" width={884} height={590} className='rounded-xl shadow-xl' />
+          <Image src={`https://ilatorre7.github.io/gaia-box-gourmet-web/about.png`} alt="Productos de Gaia Box" width={884} height={590} className='rounded-xl shadow-xl' />
         </div>
       </div>
     </div>
