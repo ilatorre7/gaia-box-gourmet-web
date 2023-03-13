@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
+import { prefix } from '@/utilities/prefix';
 
 function Menu({
   menu,
@@ -46,7 +47,13 @@ function Menu({
             <div className={`flex transition-transform ease-out duration-500`} style={{ transform: `translateX(-${index * 100}vw)`}}>
               {
                 menu.map((item,i) => (
-                  <CardMenu key={`menu-item-${i}`} {...{...item}} />
+                  <CardMenu 
+                      key={`menu-item-${i}`} 
+                      {...{
+                        ...item,
+                        image: `${prefix}${item.image}`
+                      }} 
+                      />
                 ))
               }
             </div>

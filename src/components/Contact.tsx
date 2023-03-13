@@ -23,7 +23,7 @@ function Contact() {
 
   return (
     <div ref={contactRef}>
-      <div id="contact" className='bg-gaia w-full py-8 flex flex-col-reverse lg:flex-row items-stretch'>
+      <div id="contact" className='bg-gaia w-full py-8 flex flex-col-reverse lg:flex-row items-stretch overflow-hidden'>
         <div className='form w-full lg:w-1/2 flex justify-center'>
           <ContactForm />
         </div>

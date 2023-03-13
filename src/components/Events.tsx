@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React, { useRef } from 'react'
+
 import { useIsomorphicLayoutEffect } from '@/utilities/useIsomorpficEffect';
+import { prefix } from '@/utilities/prefix';
 
 import { gsap } from "gsap";
 
@@ -22,7 +24,7 @@ function Events() {
 
   return (
     <div ref={eventsRef}>
-      <div id='events' className='bg-gaiaSecondary w-full py-8 flex flex-col lg:flex-row'>
+      <div id='events' className='bg-gaiaSecondary w-full py-8 flex flex-col lg:flex-row overflow-hidden'>
         <div className='textEvents w-full lg:w-1/2 flex flex-col justify-center px-8'>
           <Title>Eventos</Title>
           <ContentText>
@@ -32,8 +34,8 @@ function Events() {
           </ContentText>
         </div>
         <div className='imageEvents w-full lg:w-1/2 flex justify-center p-4'>
-          <Image src='/events.png' alt='eventos' height={512} width={384} className='block lg:hidden rounded-xl shadow-xl' />
-          <Image src='/events-lg.png' alt='eventos' height={733} width={662} className='hidden lg:block rounded-xl shadow-xl' />
+          <Image src={`${prefix}/events.png`} alt='eventos' height={512} width={384} className='block lg:hidden rounded-xl shadow-xl' />
+          <Image src={`${prefix}/events-lg.png`} alt='eventos' height={733} width={662} className='hidden lg:block rounded-xl shadow-xl' />
         </div>
       </div>
     </div>
