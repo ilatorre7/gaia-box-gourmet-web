@@ -8,7 +8,7 @@ function Hero() {
 
   useIsomorphicLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from('.image', { opacity: 0, y: '-100%' , duration: 2 })
+      gsap.from('.image', { opacity: 0, y: '-100%' , rotate: 180, duration: 2 })
     }, heroRef);
     return () => ctx.revert();
   }, []);

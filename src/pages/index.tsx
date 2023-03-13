@@ -1,9 +1,13 @@
 import Head from 'next/head'
 import localFont from '@next/font/local';
+
 import { NavBar, Hero, About, Menu, Wine, Events, Contact } from '@/components'
+
 import menu from '@/static/menu.json';
 import wines from '@/static/wines.json';
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const brandonGrotesque = localFont({ 
   src: [
@@ -61,6 +65,7 @@ const brandonGrotesque = localFont({
 });
 
 export default function Home() {
+  gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>

@@ -22,7 +22,7 @@ function CardMenu({
           <Image src={image} alt={name} fill className='object-cover rounded-2xl shadow-xl' />
         </div>
       </div>
-      <div className='menu w-full lg:w-half p-4 flex flex-col justify-center items-center'>
+      <div className='w-full lg:w-half p-4 flex flex-col justify-center items-center'>
         <h2 className='text-4xl py-4 font-bold text-slate-700 text-center'>{name}</h2>
         <p className='text-lg w-4/5 md:text-xl text-slate-700 text-center'>{ingredients}</p>
         <VegetarianLogo isVegetarian={vegetarian} />

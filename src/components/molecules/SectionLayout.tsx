@@ -6,15 +6,15 @@ function SectionLayout({
    bgColor,
    children,
   } : { 
-    ref: HTMLDivElement | undefined,
+    ref: React.LegacyRef<HTMLDivElement> | undefined,
     id: string, 
     bgColor: string,
     children: JSX.Element | JSX.Element[] 
   }) {
   return (
-    {/* <div id={id} ref={ref} className=''>
+    <div id={id} ref={ref} className={`${bgColor} w-full py-8 flex flex-col lg:flex-row`}>
       { children }
-    </div> */}
+    </div>
   )
 }
 
