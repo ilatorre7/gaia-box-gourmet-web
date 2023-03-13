@@ -1,7 +1,7 @@
 [
   {
     "name": "Box Gaia",
-    "image": "/box-gaia.png",
+    "image": "/box-gaia.PNG",
     "ingredients": "Contiene jamon serrano ducado real, mortadela con pistachos, lomito canadiense, salame fuet, queso brie, queso camembert, queso azul, gruyere, queso colonial, aceitunas, frutos, miel y dulce. Le agregamos pan de regalo!",
     "vegetarian": false,
     "options": ["Comen 6 / Pican 8", "Comen 4 / Pican 6"],
@@ -9,7 +9,7 @@
   },
   {
     "name": "Box Pulpeta",
-    "image": "/box-pulpeta.png",
+    "image": "/box-pulpeta.PNG",
     "ingredients": "Contiene pulpetas, tomates Cherry, aceitunas, jamón serrano ducado real, bocconcini, y un frasco con pesto. Le agregamos pan de regalo!",
     "vegetarian": false,
     "options": ["Comen 6 / Pican 8"],
@@ -17,21 +17,21 @@
   },
   {
     "name": "Torta Brie",
-    "image": "/torta-brie.png",
+    "image": "/torta-brie.PNG",
     "ingredients": "Horma de brie con topping de frutos. Le agregamos pan de regalo!",
     "vegetarian": true,
     "prices": ["$6500"]
   },
   {
     "name": "Torta Camembert",
-    "image": "/torta-camembert.png",
+    "image": "/torta-camembert.PNG",
     "ingredients": "Horma de camembert con topping de frutos. Le agregamos pan de regalo!",
     "vegetarian": true,
     "prices": ["$6500"]
   },
   {
     "name": "Box Queso",
-    "image": "/box-queso.png",
+    "image": "/box-queso.PNG",
     "ingredients": "Contiene queso brie, camembert, gruyere, provolone, queso azul, queso sardo, bocconcini, queso dambo, aceitunas, frutas, frutos secos, miel y dulce. Le agregamos pan de regalo!",
     "options": ["Comen 6 / Pican 8", "Comen 4 / Pican 6"],
     "vegetarian": true,
